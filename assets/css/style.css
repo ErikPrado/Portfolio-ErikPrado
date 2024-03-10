@@ -1,0 +1,626 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Inter; user-select: none;}
+@font-face { font-family: Inter; src: url(/assets/fonts/Inter.ttf); }
+@font-face { font-family: Inter-Italic; src: url(/assets/fonts/Inter-MediumItalic.otf); }
+a { text-decoration: none; }
+ul { list-style: none;}
+
+
+.flex { display: flex; }
+.container-size-gg{ max-width: 1500px; height: 100%; margin: 0 auto;}
+.container-size-g{ max-width: 1650px; height: 100%; margin: 0 auto;}
+
+/* Scroolbar Settings */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { width: 5px; background-color: var(--color-orange); border-radius: 5px;}
+/* Scroolbar Settings */
+
+
+:root{
+    --color-responsive-1: #000;
+    --color-responsive-2: #FFF;
+    --color-black: #000;
+    --color-orange: #F87E00;
+    --color-white:#FFF;
+    --color-light-gray: #ebebeb;
+    --color-dark-gray:#828181;
+    --weight-800: 800;
+    --weight-700: 700;
+    --weight-600: 600;
+    --weight-500: 500;
+    --txt-size-gg: 40px;
+    --txt-size-g: 25px;
+    --txt-size-mm: 20px;
+    --txt-size-m: 17px;
+    --txt-size-p: 15px;
+    --txt-size-pp: 13px;
+    --txt-size-ppp: 10px;
+}
+
+.light{
+    --color-responsive-1: #FFF;
+    --color-responsive-2: #2e2e2e;
+}
+
+
+h2.title-section{
+    color: var(--color-orange);
+    font-size: var(--txt-size-mm);
+    margin-bottom: 5px;
+    text-align: center;
+}
+    
+h3.subtitle-section{
+    margin-bottom: 20px;
+    font-size: var(--txt-size-m);
+    text-align: center;
+}
+
+.no-bold{
+    font-weight: var(--weight-500);
+}
+
+
+
+
+/* Header */
+header{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    border-bottom: 1px solid var(--color-light-gray);
+    background-color: var(--color-responsive-2);
+}
+
+header .flex{
+    justify-content: space-between;
+    height: 100%;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a{
+    color: var(--color-responsive-1);
+    font-weight: var(--weight-600);
+    font-size: var(--txt-size-p);
+    margin-right: 13px;
+    transition: .3s;
+}
+
+header nav ul li a:hover{
+    color: var(--color-orange);
+}
+
+header .container-size-gg{
+    margin: 0 auto;
+}
+
+header .div-1-3, header .div-2-3, header .div-3-3 {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+header .div-1-3{ justify-content: start; }
+header .div-2-3{ justify-content: center; }
+header .div-3-3{ justify-content: end; }
+
+header .txt-logo{
+    color: var(--color-orange);
+    font-weight: var(--weight-700);
+    font-size: var(--txt-size-g);
+}
+/* Header */
+
+
+
+
+
+
+/* 1º Section: Welcome */
+section.welcome{
+    width: 100%;
+    height: 100%;
+    padding-top: 170px;
+    padding-bottom: 90px;
+}
+
+section.welcome .txt-container{
+    width: 400px;
+    margin: 0 auto;
+}
+    
+section.welcome .txt-container p{
+    color: var(--color-black);
+    font-weight: var(--weight-800);
+    font-size: var(--txt-size-pp);
+}
+    
+section.welcome .txt-container span.color{
+    color: var(--color-orange);
+}
+    
+section.welcome .txt-container h1{
+    margin: 5px 0px 10px 0px;
+    font-size: var(--txt-size-gg);
+    font-weight: 800;
+}
+    
+section.welcome .txt-container h2{
+    margin-left: 40px;
+    font-size: var(--txt-size-g);
+}
+    
+section.welcome .txt-container .txt-animation{
+    position: relative;
+}
+    
+section.welcome .txt-container .txt-animation:before{
+    content: "";
+    color: #F87E00;
+    font-weight: 800;
+    animation: words 17s infinite;
+}
+    
+section.welcome .txt-container .txt-animation:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #F87E00;
+    right: -10px;
+    animation: cursor .7s infinite, cursor-digit 17s steps(17) infinite;
+    width: calc(100% + 8px);
+    background-color: var(--color-white);
+}
+    
+@keyframes cursor{
+    0% {
+        border-left: 2px solid var(--color-white);
+    }
+}
+    
+@keyframes words {
+    0%, 33%{
+         content: " UI / UX Designer";
+    }
+    34%, 66% {
+        content: "Web Designer";
+    }
+    67%, 99%{
+            content: "Front-end";
+    }
+}
+    
+@keyframes cursor-digit{
+    0%, 30%, 33%, 63%, 66%, 97% {
+    width: calc(100% + 8px) /** Extremo esquerda **/
+    }
+    
+    17%, 21%, 50%, 55%, 84%, 90% {
+    width: 5px /** Extremo direita **/
+    }
+}
+    
+    
+section.welcome .txt-container .social-midias-size{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+    
+section.welcome .txt-container .social-midias-size i{
+    font-size: 30px;
+    color: var(--color-black);
+    transition: .3s ease-in-out;
+}
+    
+section.welcome .txt-container .social-midias-size i:hover{
+    color: var(--color-orange);
+    scale: 1.2;
+}
+    
+.spc{
+    width: 15px;
+}
+/* 1º Section: Welcome */
+
+
+
+
+
+/* 2º Section: About me */
+section.about .f-column{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    
+section.about .f-column p.about{
+    font-size: var(--txt-size-p);
+}
+    
+section.about .f-column .info-size{
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    gap: 50px;
+}
+    
+section.about .f-column .info-size .fi-column, .se-column{
+    height: 100%;
+}
+    
+section.about .s-column{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+section.about .f-column .info-size i{
+    color: var(--color-orange);
+    font-size: 30px;
+}
+    
+section.about .f-column .info-size h4{
+    color: var(--color-black);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+    
+section.about .info-size .title-box{
+    display: flex;
+    align-items: center; 
+}
+    
+section.about .info-size p.title{
+    margin-left: 10px;
+    color: var(--color-black);
+    font-weight: 700;
+    font-size: var(--txt-p);
+}
+    
+section.about .s-column .img-size{
+    width: 250px;
+    height: 250px;
+}
+    
+.img-profile{
+    background: url(/assets/img/profile.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+    
+section.about .info-size ul li {
+    display: inline;
+}
+    
+section.about .info-size ul li p{
+    margin-bottom: 7px;
+    font-size: var(--txt-pp);
+    font-weight: 500;
+    margin-left: 40px;
+}
+    
+section.about .info-size ul li p span.color{
+    color: var(--color-dark-gray);
+}
+/* 2º Section: About me */
+
+
+
+
+
+/* 3º Section: Programs and tools */
+section.programs-tools .container-size{
+    background-color: var(--color-light-gray);
+    width: 100%;
+    border-radius: 5px;
+}
+
+section.programs-tools .f-column, section.programs-tools .s-column{
+    width: 50%;
+    margin: 20px 0px 15px 0px;
+}
+
+section.programs-tools .f-column{
+    margin-left: 30px;
+}
+
+section.programs-tools p.title{
+    font-weight: 700;
+    color: var(--color-orange);
+    font-size: var(--txt-p);
+    margin-bottom: 15px;
+}
+
+section.programs-tools .container-icons-txt{
+    width: 100%;
+    display: flex;
+}
+
+section.programs-tools .card-size{
+    width: 70px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    transition: .3s ease-in-out;
+}
+
+section.programs-tools .txt-icons{
+    font-weight: 600;
+    font-size: var(--txt-size-ppp);
+    margin: 0px 0px 5px 0px;
+    transition: .3s;
+    opacity: 1;
+}
+
+section.programs-tools .icon-box-size-html, .icon-box-size-css,
+.icon-box-size-javascript, .icon-box-size-figma, .icon-box-size-github,
+.icon-box-size-photoshop, .icon-box-size-premiere, .icon-box-size-react,
+.icon-box-size-node, .icon-box-size-php, .icon-box-size-sass{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+.card-size:hover{
+    scale: 1.2;
+}
+
+.card-size:hover .txt-icons{
+    font-size: var(--txt-size-pp);
+}
+
+.img-icon-html{
+    background-image: url(/assets/img/icons/icon-html-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-html{
+    background-image: url(/assets/img/icons/icon-html-rgb.png);
+}
+
+.img-icon-css{
+    background-image: url(/assets/img/icons/icon-css-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-css{
+    background-image: url(/assets/img/icons/icon-css-rgb.png);
+}
+
+.img-icon-javascript{
+    background-image: url(/assets/img/icons/icon-javascript-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-javascript{
+    background-image: url(/assets/img/icons/icon-javascript-rgb.png);
+}
+
+.img-icon-figma{
+    background-image: url(/assets/img/icons/icon-figma-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.card-size:hover .icon-box-size-figma{
+    background-image: url(/assets/img/icons/icon-figma-rgb.png);
+}
+
+.img-icon-github{
+    background-image: url(/assets/img/icons/icon-github-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.img-icon-photoshop{
+    background-image: url(/assets/img/icons/icon-photoshop-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-photoshop{
+    background-image: url(/assets/img/icons/icon-photoshop-rgb.png);
+}
+
+.img-icon-premiere{
+    background-image: url(/assets/img/icons/icon-premiere-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-premiere{
+    background-image: url(/assets/img/icons/icon-premiere-rgb.png);
+}
+
+.img-icon-react{
+    background-image: url(/assets/img/icons/icon-react-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-react{
+    background-image: url(/assets/img/icons/icon-react-rgb.png);
+}
+
+.img-icon-node{
+    background-image: url(/assets/img/icons/icon-node-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-node{
+    background-image: url(/assets/img/icons/icon-node-rgb.png);
+}
+
+.img-icon-php{
+    background-image: url(/assets/img/icons/icon-php-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-php{
+    background-image: url(/assets/img/icons/icon-php-rgb.png);
+}
+
+.img-icon-sass{
+    background-image: url(/assets/img/icons/icon-sass-black.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.card-size:hover .icon-box-size-sass{
+    background-image: url(/assets/img/icons/icon-sass-rgb.png);
+}
+/* 3º Section - Programans and tools */
+
+
+
+
+
+/* 4º Section - How I work */
+section.work h2.title-section{
+    margin-top: 80px;
+}
+
+section.work p.work{
+    font-size: var(--txt-size-p);
+}
+
+section.work .txt-decoration{
+    font-weight: var(--weight-500);
+    font-family: Inter-Italic;
+}
+
+section.work span.color{
+    color: var(--color-orange);
+}
+/* 4º Section - How I work */
+
+
+
+
+
+/* 5º Section - My Projects */
+section.projects{
+    width: 100%;
+    height: 100%;
+}
+
+section.projects h2.title-section{
+    margin-top: 80px;
+}
+
+section.projects .size-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.projects .card{
+    width: 350px;
+    height: 180px;
+    border-radius: 5px;
+background-color: var(--color-light-gray);
+}
+/* 5º Section - My Projects */
+
+
+
+
+
+/* 6º Section - Contact Me */
+section.contact h2.title-section{
+    margin-top: 80px;
+}
+
+section.contact h3.subtitle-section{
+    margin-bottom: 10px;
+}
+
+section.contact .social-midias-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+section.contact .card{
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .3s ease-in-out;
+    position: relative;
+    margin-right: 25px;
+}
+
+section.contact .card:hover{
+    scale: 1.2;
+    cursor: pointer;
+}
+
+section.contact .card:hover p{
+    color: var(--color-orange);
+    font-size: var(--txt-size-pp);
+}
+
+section.contact .card:hover i{
+    color: var(--color-orange);
+}
+
+section.contact .txt-icons{
+    font-weight: 600;
+    font-size: var(--txt-size-ppp);
+    margin: 10px 0px 5px 0px;
+    transition: .3s;
+}
+
+section.contact .icon-box-size{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in-out;
+}
+
+section.contact i{
+    font-size: 35px;
+}
+/* 6º Section - Contact Me */
+
+footer{
+    width: 100%;
+    height: 80px;
+}
