@@ -7,7 +7,7 @@ ul { list-style: none;}
 
 .flex { display: flex; }
 .container-size-gg{ max-width: 1500px; height: 100%; margin: 0 auto;}
-.container-size-g{ max-width: 1550px; height: 100%; margin: 0 auto;}
+.container-size-g{ max-width: 1550px; margin: 0px 5%;height: 100%; margin: 0 auto;}
 
 /* Scroolbar Settings */
 ::-webkit-scrollbar { width: 5px; }
@@ -20,11 +20,11 @@ body {
 }
 
 :root{
-    --color-responsive-1: #000;
-    --color-responsive-2: #FFF;
-    --color-responsive-3: #f8f8f8;
-    --color-responsive-4: #828181;
-    --color-responsive-5: #ebebeb;
+    --color-responsive-1: #FFF;
+    --color-responsive-2: #2e2e2e;
+    --color-responsive-3: #3a3a3a;
+    --color-responsive-4: #9c9c9c;
+    --color-responsive-5: #252525;
     --color-black: #000;
     --color-orange: #F87E00;
     --color-white:#FFF;
@@ -42,11 +42,11 @@ body {
 }
 
 .light{
-    --color-responsive-1: #FFF;
-    --color-responsive-2: #2e2e2e;
-    --color-responsive-3: #3a3a3a;
-    --color-responsive-4: #9c9c9c;
-    --color-responsive-5: #252525;
+    --color-responsive-1: #000;
+    --color-responsive-2: #FFF;
+    --color-responsive-3: #f8f8f8;
+    --color-responsive-4: #828181;
+    --color-responsive-5: #ebebeb;
 }
 
 
@@ -157,15 +157,31 @@ html.light header #switch:hover .img-icon-moon{
 }
 
 .img-icon-moon{
-    background-image: url(/assets/img/icons/icon-moon-black.png);
+    background-image: url(/assets/img/icons/icon-moon-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 html.light header .img-icon-moon{
-    background-image: url(/assets/img/icons/icon-sun-white.png);
+    background-image: url(/assets/img/icons/icon-sun-black.png);
 }
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    .container-size-g{
+        margin: 0px 3%;
+    }
+
+    header .container-size-gg{
+        padding: 0px 3%;
+    }
+
+    section.about .container-size-gg{
+        margin: 0px 6%;
+    }
+}
+/* Responsive */
+
 /* Header */
 
 
@@ -281,6 +297,14 @@ section.welcome .txt-container .social-midias-size i:hover{
 .spc{
     width: 15px;
 }
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    section.welcome .container-size-gg{
+        margin: 0px 6%;
+    }
+}
+/* Responsive */
 /* 1º Section: Welcome */
 
 
@@ -313,7 +337,6 @@ section.about .f-column .info-size .fi-column, .se-column{
     
 section.about .s-column{
     width: 40%;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -370,6 +393,42 @@ section.about .info-size ul li p{
 section.about .info-size ul li p span.color{
     color: var(--color-responsive-4);
 }
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    section.work .container-size-gg{
+        margin: 0px 6%;
+    }
+
+    section.about .f-column .info-size{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    section.about .f-column .info-size .se-column{
+        margin-bottom: 40px;
+    }
+
+    section.about .flex{
+        gap: 50px;
+    }
+
+    section.about .s-column .img-size{
+        width: 90%;
+        height: 90%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    section.about .s-column{
+        display: none;
+    }
+
+    section.about .f-column{
+        width: 100%;
+    }
+}
+/* Responsive */
 /* 2º Section: About me */
 
 
@@ -385,7 +444,7 @@ section.programs-tools .container-size{
 
 section.programs-tools .f-column, section.programs-tools .s-column{
     width: 50%;
-    margin: 20px 0px 15px 0px;
+    margin: 20px 0px;
 }
 
 section.programs-tools .f-column{
@@ -397,6 +456,8 @@ section.programs-tools p.title{
     color: var(--color-orange);
     font-size: var(--txt-p);
     margin-bottom: 15px;
+    white-space: nowrap;
+   
 }
 
 section.programs-tools .container-icons-txt{
@@ -413,14 +474,13 @@ section.programs-tools .card-size{
     align-items: center;
     margin-right: 15px;
     transition: .3s ease-in-out;
+    border: 1px solid red;
 }
 
 section.programs-tools .txt-icons{
     font-weight: 600;
     font-size: var(--txt-size-ppp);
     margin: 0px 0px 5px 0px;
-    transition: .3s;
-    opacity: 1;
 }
 
 section.programs-tools .icon-box-size-html, .icon-box-size-css,
@@ -441,10 +501,11 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 
 .card-size:hover .txt-icons{
     font-size: var(--txt-size-pp);
+    transition: .3s;
 }
 
 .img-icon-html{
-    background-image: url(/assets/img/icons/icon-html-black.png);
+    background-image: url(/assets/img/icons/icon-html-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -455,7 +516,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-css{
-    background-image: url(/assets/img/icons/icon-css-black.png);
+    background-image: url(/assets/img/icons/icon-css-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -466,7 +527,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-javascript{
-    background-image: url(/assets/img/icons/icon-javascript-black.png);
+    background-image: url(/assets/img/icons/icon-javascript-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -477,7 +538,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-figma{
-    background-image: url(/assets/img/icons/icon-figma-black.png);
+    background-image: url(/assets/img/icons/icon-figma-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -489,14 +550,14 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-github{
-    background-image: url(/assets/img/icons/icon-github-black.png);
+    background-image: url(/assets/img/icons/icon-github-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 .img-icon-photoshop{
-    background-image: url(/assets/img/icons/icon-photoshop-black.png);
+    background-image: url(/assets/img/icons/icon-photoshop-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -507,7 +568,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-premiere{
-    background-image: url(/assets/img/icons/icon-premiere-black.png);
+    background-image: url(/assets/img/icons/icon-premiere-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -518,7 +579,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-react{
-    background-image: url(/assets/img/icons/icon-react-black.png);
+    background-image: url(/assets/img/icons/icon-react-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -529,7 +590,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-node{
-    background-image: url(/assets/img/icons/icon-node-black.png);
+    background-image: url(/assets/img/icons/icon-node-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -540,7 +601,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-php{
-    background-image: url(/assets/img/icons/icon-php-black.png);
+    background-image: url(/assets/img/icons/icon-php-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -551,7 +612,7 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 .img-icon-sass{
-    background-image: url(/assets/img/icons/icon-sass-black.png);
+    background-image: url(/assets/img/icons/icon-sass-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -562,71 +623,104 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
 }
 
 html.light .img-icon-html{
-    background-image: url(/assets/img/icons/icon-html-white.png);
+    background-image: url(/assets/img/icons/icon-html-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-css{
-    background-image: url(/assets/img/icons/icon-css-white.png);
+    background-image: url(/assets/img/icons/icon-css-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-javascript{
-    background-image: url(/assets/img/icons/icon-javascript-white.png);
+    background-image: url(/assets/img/icons/icon-javascript-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-figma{
-    background-image: url(/assets/img/icons/icon-figma-white.png);
+    background-image: url(/assets/img/icons/icon-figma-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-github{
-    background-image: url(/assets/img/icons/icon-github-white.png);
+    background-image: url(/assets/img/icons/icon-github-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-photoshop{
-    background-image: url(/assets/img/icons/icon-photoshop-white.png);
+    background-image: url(/assets/img/icons/icon-photoshop-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-premiere{
-    background-image: url(/assets/img/icons/icon-premiere-white.png);
+    background-image: url(/assets/img/icons/icon-premiere-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-react{
-    background-image: url(/assets/img/icons/icon-react-white.png);
+    background-image: url(/assets/img/icons/icon-react-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-node{
-    background-image: url(/assets/img/icons/icon-node-white.png);
+    background-image: url(/assets/img/icons/icon-node-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-php{
-    background-image: url(/assets/img/icons/icon-php-white.png);
+    background-image: url(/assets/img/icons/icon-php-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 html.light .img-icon-sass{
-    background-image: url(/assets/img/icons/icon-sass-white.png);
+    background-image: url(/assets/img/icons/icon-sass-black.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    section.programs-tools .container-size-gg{
+        margin: 0px 6%;
+    }
+
+    section.programs-tools .f-column, section.programs-tools .s-column{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    section.programs-tools .flex{
+        flex-direction: column;
+    }
+
+    section.programs-tools .s-column{
+        margin-left: 30px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    section.programs-tools .f-column{
+        flex-wrap: wrap;
+    }
+
+
+}
+    
+/* Responsive */
 /* 3º Section - Programans and tools */
 
 
@@ -651,6 +745,14 @@ section.work .txt-decoration{
 section.work span.color{
     color: var(--color-orange);
 }
+
+/* responsive */
+@media screen and (max-width: 1600px) {
+    section.work .container-size-gg{
+        margin: 0px 6%;
+    }
+}
+/* responsive */
 /* 4º Section - How I work */
 
 
@@ -678,8 +780,16 @@ section.projects .card{
     width: 350px;
     height: 180px;
     border-radius: 5px;
-background-color: var(--color-responsive-3);
+    background-color: var(--color-responsive-3);
 }
+
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    section.projects .container-size-gg{
+        margin: 0px 6%;
+    }
+}
+/* Responsive */
 /* 5º Section - My Projects */
 
 
@@ -746,6 +856,14 @@ section.contact i{
     font-size: 35px;
     color: var(--color-responsive-1);
 }
+/* Responsive */
+@media screen and (max-width: 1600px) {
+    section.contact .container-size-gg{
+        margin: 0px 6%;
+    }
+}
+/* Responsive */
+
 /* 6º Section - Contact Me */
 
 footer{
