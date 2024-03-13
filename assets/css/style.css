@@ -25,6 +25,8 @@ body {
     --color-responsive-3: #3a3a3a;
     --color-responsive-4: #9c9c9c;
     --color-responsive-5: #252525;
+    --color-responsive-6: #1b1b1b;
+    --color-responsive-7: #313131;
     --color-black: #000;
     --color-orange: #F87E00;
     --color-white:#FFF;
@@ -47,6 +49,8 @@ body {
     --color-responsive-3: #f8f8f8;
     --color-responsive-4: #828181;
     --color-responsive-5: #ebebeb;
+    --color-responsive-6: #e0e0e0;
+    --color-responsive-7: #f0f0f0;
 }
 
 
@@ -77,24 +81,42 @@ header{
     height: 70px;
     position: fixed;
     z-index: 1;
-    margin-top: 20px;
-}
-
-header .container-size-g{
     background-color: var(--color-responsive-5);
-    border-radius: 5px;
+    box-shadow: 0px 12px 26px 0px var(--color-responsive-6);
 }
 
 header .flex{
-    justify-content: space-between;
-    height: 100%;
+    justify-content: space-around;
 }
 
-header nav ul li {
+header .div-1-2{
+    width: 33%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+header .div-2-2{
+    width: 33%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .div-3-2{
+    width: 33%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+header nav.menu-computer ul li {
     display: inline;
 }
 
-header nav ul li a{
+header nav.menu-computer ul li a{
     color: var(--color-responsive-1);
     font-weight: var(--weight-600);
     font-size: var(--txt-size-p);
@@ -102,20 +124,65 @@ header nav ul li a{
     transition: .3s;
 }
 
-header nav ul li a:hover{
+header nav.menu-computer ul li a:hover{
     color: var(--color-orange);
 }
 
-header .div-1-3, header .div-2-3, header .div-3-3 {
-    width: 33%;
-    height: 100%;
-    display: flex;
-    align-items: center;
+header .menu-mobile{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    visibility: hidden;
+    box-shadow: 0px 12px 26px 0px rgba(0, 0, 0, 0.205);
 }
 
-header .div-1-3{ justify-content: start; }
-header .div-2-3{ justify-content: center; }
-header .div-3-3{ justify-content: end; }
+header #btn-menu{
+    border: 2px solid var(--color-responsive-1);
+    background-color: var(--color-responsive-5);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding-top: 3px;
+    flex-direction: column;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+
+header #btn-menu:hover {
+    scale: 1.2;
+    transition: .3s;
+    border: 2px solid var(--color-orange);
+}
+
+header #btn-menu:hover span.line{
+    background-color: var(--color-orange);
+    transition: .3s;
+}
+
+header #btn-menu span.line{
+    width: 12px;
+    height: 2px;
+    background-color: var(--color-responsive-1);
+}
+
+header .menu-mobile nav a{
+    color: var(--color-responsive-1);
+    font-weight: var(--weight-600);
+    font-size: var(--txt-size-p);
+    display: block;
+    padding: 10px 30px;
+}
+
+header .menu-mobile nav a:hover{
+    color: var(--color-orange);
+    background-color: var(--color-responsive-7);
+}
 
 header .txt-logo{
     color: var(--color-orange);
@@ -179,6 +246,26 @@ html.light header .img-icon-moon{
     section.about .container-size-gg{
         margin: 0px 6%;
     }
+}
+
+@media screen and (max-width: 700px){
+   header .flex .menu-computer{
+    display: none;
+   }
+
+   .menu-mobile.open{
+    visibility: visible;
+   }
+
+   header #btn-menu{
+    display: block;
+   }
+
+   header #btn-menu span.line{
+    display: block;
+    margin: 3px 0px;
+   }
+   
 }
 /* Responsive */
 
@@ -367,8 +454,8 @@ section.about .info-size p.title{
 }
     
 section.about .s-column .img-size{
-    width: 250px;
-    height: 250px;
+    width: 215px;
+    height: 215px;
 }
     
 .img-profile{
@@ -440,6 +527,7 @@ section.programs-tools .container-size{
     background-color: var(--color-responsive-3);
     width: 100%;
     border-radius: 5px;
+    margin-top: 30px;
 }
 
 section.programs-tools .f-column, section.programs-tools .s-column{
@@ -448,7 +536,11 @@ section.programs-tools .f-column, section.programs-tools .s-column{
 }
 
 section.programs-tools .f-column{
-    margin-left: 30px;
+    padding-left: 30px;
+}
+
+section.programs-tools .f-column .flex{
+    flex-wrap: wrap;
 }
 
 section.programs-tools p.title{
@@ -474,7 +566,6 @@ section.programs-tools .card-size{
     align-items: center;
     margin-right: 15px;
     transition: .3s ease-in-out;
-    border: 1px solid red;
 }
 
 section.programs-tools .txt-icons{
@@ -510,118 +601,96 @@ section.programs-tools .icon-box-size-html, .icon-box-size-css,
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-html{
     background-image: url(/assets/img/icons/icon-html-rgb.png);
 }
-
 .img-icon-css{
     background-image: url(/assets/img/icons/icon-css-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-css{
     background-image: url(/assets/img/icons/icon-css-rgb.png);
 }
-
 .img-icon-javascript{
     background-image: url(/assets/img/icons/icon-javascript-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-javascript{
     background-image: url(/assets/img/icons/icon-javascript-rgb.png);
 }
-
 .img-icon-figma{
     background-image: url(/assets/img/icons/icon-figma-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
-
 .card-size:hover .icon-box-size-figma{
     background-image: url(/assets/img/icons/icon-figma-rgb.png);
 }
-
 .img-icon-github{
     background-image: url(/assets/img/icons/icon-github-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .img-icon-photoshop{
     background-image: url(/assets/img/icons/icon-photoshop-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-photoshop{
     background-image: url(/assets/img/icons/icon-photoshop-rgb.png);
 }
-
 .img-icon-premiere{
     background-image: url(/assets/img/icons/icon-premiere-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-premiere{
     background-image: url(/assets/img/icons/icon-premiere-rgb.png);
 }
-
 .img-icon-react{
     background-image: url(/assets/img/icons/icon-react-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-react{
     background-image: url(/assets/img/icons/icon-react-rgb.png);
 }
-
 .img-icon-node{
     background-image: url(/assets/img/icons/icon-node-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-node{
     background-image: url(/assets/img/icons/icon-node-rgb.png);
 }
-
 .img-icon-php{
     background-image: url(/assets/img/icons/icon-php-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-php{
     background-image: url(/assets/img/icons/icon-php-rgb.png);
 }
-
 .img-icon-sass{
     background-image: url(/assets/img/icons/icon-sass-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
-
 .card-size:hover .icon-box-size-sass{
     background-image: url(/assets/img/icons/icon-sass-rgb.png);
 }
-
 html.light .img-icon-html{
     background-image: url(/assets/img/icons/icon-html-black.png);
     background-position: center;
@@ -712,13 +781,6 @@ html.light .img-icon-sass{
     }
 }
 
-@media screen and (max-width: 720px) {
-    section.programs-tools .f-column{
-        flex-wrap: wrap;
-    }
-
-
-}
     
 /* Responsive */
 /* 3º Section - Programans and tools */
@@ -774,6 +836,8 @@ section.projects .size-content{
     height: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 section.projects .card{
@@ -781,6 +845,15 @@ section.projects .card{
     height: 180px;
     border-radius: 5px;
     background-color: var(--color-responsive-3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.projects .card p{
+    color: var(--color-responsive-1);
+    font-size: var(--txt-p);
 }
 
 /* Responsive */
@@ -809,6 +882,7 @@ section.contact .social-midias-container{
     display: flex;
     justify-content: center;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 section.contact .card{
@@ -868,5 +942,5 @@ section.contact i{
 
 footer{
     width: 100%;
-    height: 80px;
+    height: 120px;
 }
