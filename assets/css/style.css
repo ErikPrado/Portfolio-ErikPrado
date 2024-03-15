@@ -15,6 +15,10 @@ ul { list-style: none;}
 /* Scroolbar Settings */
 
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-responsive-2);
 }
@@ -243,7 +247,7 @@ html.light header .img-icon-moon{
         padding: 0px 3%;
     }
 
-    section.about .container-size-gg{
+    section#about .container-size-gg{
         margin: 0px 6%;
     }
 }
@@ -277,53 +281,53 @@ html.light header .img-icon-moon{
 
 
 /* 1º Section: Welcome */
-section.welcome{
+section#welcome{
     width: 100%;
     height: 100%;
     padding-top: 190px;
     padding-bottom: 90px;
 }
 
-section.welcome .txt-container{
+section#welcome .txt-container{
     width: 400px;
     margin: 0 auto;
 }
     
-section.welcome .txt-container p{
+section#welcome .txt-container p{
     color: var(--color-responsive-1);
     font-weight: var(--weight-800);
     font-size: var(--txt-size-pp);
 }
     
-section.welcome .txt-container span.color{
+section#welcome .txt-container span.color{
     color: var(--color-orange);
 }
     
-section.welcome .txt-container h1{
+section#welcome .txt-container h1{
     margin: 5px 0px 10px 0px;
     font-size: var(--txt-size-gg);
     font-weight: 800;
     color: var(--color-responsive-1);
 }
     
-section.welcome .txt-container h2{
+section#welcome .txt-container h2{
     margin-left: 40px;
     font-size: var(--txt-size-g);
     color: var(--color-responsive-1);
 }
     
-section.welcome .txt-container .txt-animation{
+section#welcome .txt-container .txt-animation{
     position: relative;
 }
     
-section.welcome .txt-container .txt-animation:before{
+section#welcome .txt-container .txt-animation:before{
     content: "";
     color: #F87E00;
     font-weight: 800;
     animation: words 17s infinite;
 }
     
-section.welcome .txt-container .txt-animation:after{
+section#welcome .txt-container .txt-animation:after{
     content: "";
     position: absolute;
     height: 100%;
@@ -363,20 +367,20 @@ section.welcome .txt-container .txt-animation:after{
 }
     
     
-section.welcome .txt-container .social-midias-size{
+section#welcome .txt-container .social-midias-size{
     margin-top: 10px;
     width: 100%;
     display: flex;
     justify-content: center;
 }
     
-section.welcome .txt-container .social-midias-size i{
+section#welcome .txt-container .social-midias-size i{
     font-size: 30px;
     color: var(--color-responsive-1);
     transition: .3s ease-in-out;
 }
     
-section.welcome .txt-container .social-midias-size i:hover{
+section#welcome .txt-container .social-midias-size i:hover{
     color: var(--color-orange);
     scale: 1.2;
 }
@@ -387,7 +391,7 @@ section.welcome .txt-container .social-midias-size i:hover{
 
 /* Responsive */
 @media screen and (max-width: 1600px) {
-    section.welcome .container-size-gg{
+    section#welcome .container-size-gg{
         margin: 0px 6%;
     }
 }
@@ -399,61 +403,61 @@ section.welcome .txt-container .social-midias-size i:hover{
 
 
 /* 2º Section: About me */
-section.about .f-column{
+section#about .f-column{
     width: 60%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
     
-section.about .f-column p.about{
+section#about .f-column p.about{
     font-size: var(--txt-size-p);
     color: var(--color-responsive-1);
 }
     
-section.about .f-column .info-size{
+section#about .f-column .info-size{
     width: 100%;
     margin-top: 25px;
     display: flex;
     gap: 50px;
 }
     
-section.about .f-column .info-size .fi-column, .se-column{
+section#about .f-column .info-size .fi-column, .se-column{
     height: 100%;
 }
     
-section.about .s-column{
+section#about .s-column{
     width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
     
-section.about .f-column .info-size i{
+section#about .f-column .info-size i{
     color: var(--color-orange);
     font-size: 30px;
 }
     
-section.about .f-column .info-size h4{
+section#about .f-column .info-size h4{
     color: var(--color-black);
     font-weight: 700;
     display: flex;
     align-items: center;
 }
     
-section.about .info-size .title-box{
+section#about .info-size .title-box{
     display: flex;
     align-items: center; 
 }
     
-section.about .info-size p.title{
+section#about .info-size p.title{
     margin-left: 10px;
     color: var(--color-responsive-1);
     font-weight: 700;
     font-size: var(--txt-p);
 }
     
-section.about .s-column .img-size{
+section#about .s-column .img-size{
     width: 215px;
     height: 215px;
 }
@@ -465,11 +469,11 @@ section.about .s-column .img-size{
     background-size: contain;
 }
     
-section.about .info-size ul li {
+section#about .info-size ul li {
     display: inline;
 }
     
-section.about .info-size ul li p{
+section#about .info-size ul li p{
     margin-bottom: 7px;
     font-size: var(--txt-pp);
     font-weight: 500;
@@ -477,41 +481,41 @@ section.about .info-size ul li p{
     color: var(--color-responsive-1);
 }
     
-section.about .info-size ul li p span.color{
+section#about .info-size ul li p span.color{
     color: var(--color-responsive-4);
 }
 
 /* Responsive */
 @media screen and (max-width: 1600px) {
-    section.work .container-size-gg{
+    section#work .container-size-gg{
         margin: 0px 6%;
     }
 
-    section.about .f-column .info-size{
+    section#about .f-column .info-size{
         flex-direction: column;
         gap: 20px;
     }
 
-    section.about .f-column .info-size .se-column{
+    section#about .f-column .info-size .se-column{
         margin-bottom: 40px;
     }
 
-    section.about .flex{
+    section#about .flex{
         gap: 50px;
     }
 
-    section.about .s-column .img-size{
+    section#about .s-column .img-size{
         width: 90%;
         height: 90%;
     }
 }
 
 @media screen and (max-width: 850px) {
-    section.about .s-column{
+    section#about .s-column{
         display: none;
     }
 
-    section.about .f-column{
+    section#about .f-column{
         width: 100%;
     }
 }
@@ -523,27 +527,27 @@ section.about .info-size ul li p span.color{
 
 
 /* 3º Section: Programs and tools */
-section.programs-tools .container-size{
+section#programs-tools .container-size{
     background-color: var(--color-responsive-3);
     width: 100%;
     border-radius: 5px;
     margin-top: 30px;
 }
 
-section.programs-tools .f-column, section.programs-tools .s-column{
+section#programs-tools .f-column, section#programs-tools .s-column{
     width: 50%;
     margin: 20px 0px;
 }
 
-section.programs-tools .f-column{
+section#programs-tools .f-column{
     padding-left: 30px;
 }
 
-section.programs-tools .f-column .flex{
+section#programs-tools .f-column .flex{
     flex-wrap: wrap;
 }
 
-section.programs-tools p.title{
+section#programs-tools p.title{
     font-weight: 700;
     color: var(--color-orange);
     font-size: var(--txt-p);
@@ -552,13 +556,13 @@ section.programs-tools p.title{
    
 }
 
-section.programs-tools .container-icons-txt{
+section#programs-tools .container-icons-txt{
     width: 100%;
     display: flex;
     color: var(--color-responsive-1);
 }
 
-section.programs-tools .card-size{
+section#programs-tools .card-size{
     width: 70px;
     height: 80px;
     display: flex;
@@ -568,13 +572,13 @@ section.programs-tools .card-size{
     transition: .3s ease-in-out;
 }
 
-section.programs-tools .txt-icons{
+section#programs-tools .txt-icons{
     font-weight: 600;
     font-size: var(--txt-size-ppp);
     margin: 0px 0px 5px 0px;
 }
 
-section.programs-tools .icon-box-size-html, .icon-box-size-css,
+section#programs-tools .icon-box-size-html, .icon-box-size-css,
 .icon-box-size-javascript, .icon-box-size-figma, .icon-box-size-github,
 .icon-box-size-photoshop, .icon-box-size-premiere, .icon-box-size-react,
 .icon-box-size-node, .icon-box-size-php, .icon-box-size-sass{
@@ -760,21 +764,21 @@ html.light .img-icon-sass{
 
 /* Responsive */
 @media screen and (max-width: 1600px) {
-    section.programs-tools .container-size-gg{
+    section#programs-tools .container-size-gg{
         margin: 0px 6%;
     }
 
-    section.programs-tools .f-column, section.programs-tools .s-column{
+    section#programs-tools .f-column, section.programs-tools .s-column{
         width: 100%;
     }
 }
 
 @media screen and (max-width: 1320px) {
-    section.programs-tools .flex{
+    section#programs-tools .flex{
         flex-direction: column;
     }
 
-    section.programs-tools .s-column{
+    section#programs-tools .s-column{
         margin-left: 30px;
         margin-top: 0px;
         margin-bottom: 5px;
@@ -790,27 +794,27 @@ html.light .img-icon-sass{
 
 
 /* 4º Section - How I work */
-section.work h2.title-section{
+section#work h2.title-section{
     margin-top: 80px;
 }
 
-section.work p.work{
+section#work p.work{
     font-size: var(--txt-size-p);
     color: var(--color-responsive-1);
 }
 
-section.work .txt-decoration{
+section#work .txt-decoration{
     font-weight: var(--weight-500);
     font-family: Inter-Italic;
 }
 
-section.work span.color{
+section#work span.color{
     color: var(--color-orange);
 }
 
 /* responsive */
 @media screen and (max-width: 1600px) {
-    section.work .container-size-gg{
+    section#work .container-size-gg{
         margin: 0px 6%;
     }
 }
@@ -822,16 +826,16 @@ section.work span.color{
 
 
 /* 5º Section - My Projects */
-section.projects{
+section#projects{
     width: 100%;
     height: 100%;
 }
 
-section.projects h2.title-section{
+section#projects h2.title-section{
     margin-top: 80px;
 }
 
-section.projects .size-content{
+section#projects .size-content{
     width: 100%;
     height: 100%;
     display: flex;
@@ -840,7 +844,7 @@ section.projects .size-content{
     gap: 20px;
 }
 
-section.projects .card{
+section#projects .card{
     width: 350px;
     height: 180px;
     border-radius: 5px;
@@ -851,14 +855,14 @@ section.projects .card{
     align-items: center;
 }
 
-section.projects .card p{
+section#projects .card p{
     color: var(--color-responsive-1);
     font-size: var(--txt-p);
 }
 
 /* Responsive */
 @media screen and (max-width: 1600px) {
-    section.projects .container-size-gg{
+    section#projects .container-size-gg{
         margin: 0px 6%;
     }
 }
@@ -870,22 +874,22 @@ section.projects .card p{
 
 
 /* 6º Section - Contact Me */
-section.contact h2.title-section{
+section#contact h2.title-section{
     margin-top: 80px;
 }
 
-section.contact h3.subtitle-section{
+section#contact h3.subtitle-section{
     margin-bottom: 10px;
 }
 
-section.contact .social-midias-container{
+section#contact .social-midias-container{
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
 
-section.contact .card{
+section#contact .card{
     width: 70px;
     display: flex;
     flex-direction: column;
@@ -895,21 +899,21 @@ section.contact .card{
     margin-right: 25px;
 }
 
-section.contact .card:hover{
+section#contact .card:hover{
     scale: 1.2;
     cursor: pointer;
 }
 
-section.contact .card:hover p{
+section#contact .card:hover p{
     color: var(--color-orange);
     font-size: var(--txt-size-pp);
 }
 
-section.contact .card:hover i{
+section#contact .card:hover i{
     color: var(--color-orange);
 }
 
-section.contact .txt-icons{
+section#contact .txt-icons{
     font-weight: 600;
     font-size: var(--txt-size-ppp);
     margin: 10px 0px 5px 0px;
@@ -917,7 +921,7 @@ section.contact .txt-icons{
     color: var(--color-responsive-1);
 }
 
-section.contact .icon-box-size{
+section#contact .icon-box-size{
     width: 35px;
     height: 35px;
     display: flex;
@@ -926,13 +930,13 @@ section.contact .icon-box-size{
     transition: .3s ease-in-out;
 }
 
-section.contact i{
+section#contact i{
     font-size: 35px;
     color: var(--color-responsive-1);
 }
 /* Responsive */
 @media screen and (max-width: 1600px) {
-    section.contact .container-size-gg{
+    section#contact .container-size-gg{
         margin: 0px 6%;
     }
 }
