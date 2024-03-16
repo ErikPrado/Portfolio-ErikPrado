@@ -855,6 +855,12 @@ section#projects .card{
     align-items: center;
 }
 
+section#projects .card:hover{
+    scale: 1.15;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
 section#projects .card p{
     color: var(--color-responsive-1);
     font-size: var(--txt-p);
