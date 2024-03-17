@@ -220,22 +220,22 @@ header #switch:hover{
 }
 
 header #switch:hover .img-icon-moon{
-    background-image: url(/assets/img/icons/icon-moon-orange.png);
+    background-image: url(./assets/img/icons/icon-moon-orange.png);
 }
 
 html.light header #switch:hover .img-icon-moon{
-    background-image: url(/assets/img/icons/icon-sun-orange.png);
+    background-image: url(./assets/img/icons/icon-sun-orange.png);
 }
 
 .img-icon-moon{
-    background-image: url(/assets/img/icons/icon-moon-white.png);
+    background-image: url(./assets/img/icons/icon-moon-white.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
 html.light header .img-icon-moon{
-    background-image: url(/assets/img/icons/icon-sun-black.png);
+    background-image: url(./assets/img/icons/icon-sun-black.png);
 }
 /* Responsive */
 @media screen and (max-width: 1600px) {
